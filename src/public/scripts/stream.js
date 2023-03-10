@@ -38,6 +38,9 @@ function verVideo(video, context) {
 }
 
 btn.addEventListener('click', () => {
+    //eliminamos el icono de camara sin video
+    document.querySelector('.video-icon-container').style.display = "none";
+
     alert('Emitiendo');
     navigator.getUserMedia = (navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
@@ -51,5 +54,5 @@ btn.addEventListener('click', () => {
     setInterval(() => {
         //Se ejecuta funcion con objeto video de html y context para refrescar en el intervalo
         verVideo(video, context);
-    });
+    }, 400);
 })

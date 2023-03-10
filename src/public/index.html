@@ -1,24 +1,54 @@
-
 <!-- Este html sera el que emita -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emisor del Streaming</title>
     <script src="/socket.io/socket.io.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
-    <h1>Estoy Funcionando Bro</h1>
-    <button id="btn"> Grabar </button>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Transmision con socket io</a>
+        </div>
+    </nav>
 
-    <video src="" id="video" style="width: 800px; height: 600px;"
-    autoplay="true"></video>
+    <button id="btn" class="grabar-btn btn btn-dark"> <i class="fa-solid fa-video"></i> Grabar </button>
 
-     <canvas id="preview"></canvas> <!-- copia que se crea para luego enviarlo-->
-     <div class="status"></div> <!-- Etiqueta destinada a decir el estado de la camara con funcion colocarMensaje-->
-     
-     <script src="./scripts/stream.js"></script>
+    <div class="m-0 p-0">
+
+        <div class="video">
+            <video src="" id="video" autoplay="true"></video>
+        </div>
+
+        <div class="video-icon-container">
+            <i class="fa-solid fa-video-slash icon-video"></i>
+        </div>
+
+        <canvas id="preview"></canvas> <!-- copia que se crea para luego enviarlo-->
+        <div class="status text-light font-monospace">Inactivo</div> <!-- Etiqueta destinada a decir el estado de la camara con funcion colocarMensaje-->
+    </div>
+    
+
+    <script src="./scripts/stream.js"></script>
+
+    <!-- boostrap cdn scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
