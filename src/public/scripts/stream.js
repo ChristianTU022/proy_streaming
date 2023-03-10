@@ -48,8 +48,8 @@ btn.addEventListener('click', () => {
         navigator.getUserMedia({ video: true }, cargarCamara, errorCamara)
     }
     //Funcion que Refresca
-    var intervalo = setInterval(() => {
+    setInterval(() => {
         //Se ejecuta funcion con objeto video de html y context para refrescar en el intervalo
         verVideo(video, context);
-    }, 400);
+    });
 })
