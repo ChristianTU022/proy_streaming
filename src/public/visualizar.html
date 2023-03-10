@@ -6,9 +6,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Usuario X que Vera la Emision</title>
+    <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
     
+    <img id="play" src="" alt="">
+
+    <script>
+        var socket = io();
+        //Ejecutar evento socket de tipo stream, donde recibe una imagen
+        socket.on('stream', (image) =>{
+            let img = document.querySelector('#play');
+            img.src = image;
+        })
+
+    </script>
+
 </body>
 </html>

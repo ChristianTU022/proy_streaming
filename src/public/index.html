@@ -26,6 +26,9 @@
         var context = canvas.getContext('2d');
         var btn = document.querySelector('#btn');
 
+        //Ocultar la preview que se usara para enviar al receptor
+        canvas.style.display = 'none';
+
         canvas.width = 512;
         canvas.height = 384;
 
@@ -72,7 +75,7 @@
             var intervalo = setInterval(() => {
                 //Se ejecuta funcion con objeto video de html y context para refrescar en el intervalo
                 verVideo(video, context);
-            }, 500);
+            }, 400);
         })
 
      </script>
