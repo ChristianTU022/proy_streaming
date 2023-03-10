@@ -10,18 +10,8 @@
     <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-    
     <img id="play" src="" alt="">
 
-    <script>
-        var socket = io();
-        //Ejecutar evento socket de tipo stream, donde recibe una imagen
-        socket.on('stream', (image) =>{
-            let img = document.querySelector('#play');
-            img.src = image;
-        })
-
-    </script>
-
+    <script src="./scripts/view.js"></script>
 </body>
 </html>
